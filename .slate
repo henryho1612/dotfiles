@@ -1,0 +1,69 @@
+############### Directives For Configuration ##################
+## config (for global configurations)
+## alias (to create alias variables)
+## layout (to configure layouts)
+## default (to default certain screen configurations to layouts)
+## bind (for key bindings)
+## source (to load configs from another file
+###############################################################
+
+#######################
+# General Config
+#######################
+config defaultToCurrentScreen true
+# Shows app icons and background apps, spread icons in the same place.
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Config Window Hints appearance 
+config windowHintsWidth 50
+config windowHintsHeight 50
+config windowHintsFontSize 20
+
+#######################
+# Abstract Position for window management
+#######################
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY #full screen
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY #left half screen
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY #right half screen
+alias tophalf move screenOriginX;screenOriginY screenSizeX;screenSizeY/2 #top half screen
+alias bottomhalf move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2 #bottom half screen
+alias onefourthofscreen-topleft move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2 #one fourth of screen - top left
+alias onefourthofscreen-topright move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2 #one fourth of screen - top right
+alias onefourthofscreen-bottomleft move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 #one fourth of screen - bottom left
+alias onefourthofscreen-bottomright move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2 #one fourth of screen - bottom right
+alias moreX move windowTopLeftX;windowTopLeftY windowSizeX+screenSizeX/16;windowSizeY #more X
+alias lessX move windowTopLeftX;windowTopLeftY windowSizeX-screenSizeX/16;windowSizeY #less X
+alias moreY move windowTopLeftX;windowTopLeftY windowSizeX;windowSizeY+screenSizeX/16 #more Y
+alias lessY move windowTopLeftX;windowTopLeftY windowSizeX;windowSizeY-screenSizeX/16 #less Y
+alias shiftUp move windowTopLeftX;windowTopLeftY-screenSizeY/16 windowSizeX;windowSizeY #shift window up
+alias shiftDown move windowTopLeftX;windowTopLeftY+screenSizeY/16 windowSizeX;windowSizeY #shift window down
+alias shiftLeft move windowTopLeftX-screenSizeX/16;windowTopLeftY windowSizeX;windowSizeY #shift window left
+alias shiftRight move windowTopLeftX+screenSizeX/16;windowTopLeftY windowSizeX;windowSizeY #shift window right
+
+# Key bindings for the positions
+bind f:alt;cmd ${full} # full screen 
+bind left:alt;cmd ${lefthalf} # Left Half
+bind right:alt;cmd ${righthalf} # Right Half
+bind up:alt;cmd ${tophalf} # Top Half
+bind down:alt;cmd ${bottomhalf} # Bottom Half
+bind 1:ctrl;cmd ${onefourthofscreen-topleft} # One fourth of screen - top left
+bind 2:ctrl;cmd ${onefourthofscreen-topright} # One fourth of screen - top right 
+bind 3:ctrl;cmd ${onefourthofscreen-bottomleft} # One fourth of screen - bottom left
+bind 4:ctrl;cmd ${onefourthofscreen-bottomright} # One fourth of screen - bottom right
+bind left:shift;alt;cmd ${lessX} # Decreases X
+bind right:shift;alt;cmd ${moreX} # Increases X
+bind up:shift;alt;cmd ${lessY} # Decreases Y
+bind down:shift;alt;cmd ${moreY} # Increases Y
+bind left:shift;cmd ${shiftLeft} # Shift Left
+bind right:shift;cmd ${shiftRight} # Shift Right
+bind up:shift;cmd ${shiftUp} # Shift Up
+bind down:shift;cmd ${shiftDown} # Shift Down
+
+bind 1:shift;cmd throw 0 resize # throw the window to the 1st screen and resize it to fit that screen 
+bind 2:shift;cmd throw 1 resize # throw the window to the 2nd screen and resize it to fit that screen
+bind s:ctrl;shift relaunch # relaunch Slate
+
+# Window Hints
+# bind e:cmd hint
