@@ -2,7 +2,7 @@ My personal config files.
 
 Installation
 ========
-$ git clone https://github.com/henryho1612/dotfiles.git
-$ ln -s .zshrc ~/.zshrc
-$ ln -s .slate ~/.slate
-$ ln -s .vimrc ~/.vimrc
+$ git clone https://github.com/henryho1612/dotfiles.git<br/>
+$ ln -s .zshrc ~/.zshrc<br/>
+$ ln -s .slate ~/.slate<br/>
+$ ln -s .vimrc ~/.vimrc<br/>
