@@ -44,26 +44,30 @@ alias shiftRight move windowTopLeftX+screenSizeX/16;windowTopLeftY windowSizeX;w
 
 # Key bindings for the positions
 bind f:alt;cmd ${full} # full screen 
-bind left:ctrl;shift;alt;cmd ${lefthalf} # Left Half
-bind right:ctrl;shift;alt;cmd ${righthalf} # Right Half
-bind up:ctrl;shift;alt;cmd ${tophalf} # Top Half
-bind down:ctrl;shift;alt;cmd ${bottomhalf} # Bottom Half
+
+bind left:alt;cmd ${lefthalf} # Left Half
+bind right:alt;cmd ${righthalf} # Right Half
+bind up:alt;cmd ${tophalf} # Top Half
+bind down:alt;cmd ${bottomhalf} # Bottom Half
+
 bind 1:ctrl;cmd ${onefourthofscreen-topleft} # One fourth of screen - top left
 bind 2:ctrl;cmd ${onefourthofscreen-topright} # One fourth of screen - top right 
 bind 3:ctrl;cmd ${onefourthofscreen-bottomleft} # One fourth of screen - bottom left
 bind 4:ctrl;cmd ${onefourthofscreen-bottomright} # One fourth of screen - bottom right
+
 bind left:shift;alt;cmd ${lessX} # Decreases X
 bind right:shift;alt;cmd ${moreX} # Increases X
 bind up:shift;alt;cmd ${lessY} # Decreases Y
 bind down:shift;alt;cmd ${moreY} # Increases Y
-bind left:shift;cmd ${shiftLeft} # Shift Left
-bind right:shift;cmd ${shiftRight} # Shift Right
-bind up:shift;cmd ${shiftUp} # Shift Up
-bind down:shift;cmd ${shiftDown} # Shift Down
+
+bind left:ctrl;shift;cmd ${shiftLeft} # Shift Left
+bind right:ctrl;shift;cmd ${shiftRight} # Shift Right
+bind up:ctrl;shift;cmd ${shiftUp} # Shift Up
+bind down:ctrl;shift;cmd ${shiftDown} # Shift Down
 
 bind 1:shift;cmd throw 0 resize # throw the window to the 1st screen and resize it to fit that screen 
 bind 2:shift;cmd throw 1 resize # throw the window to the 2nd screen and resize it to fit that screen
-bind s:ctrl;shift relaunch # relaunch Slate
+bind s:ctrl;alt relaunch # relaunch Slate
 
 # Window Hints
 # bind e:cmd hint
