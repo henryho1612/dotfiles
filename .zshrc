@@ -137,6 +137,9 @@ if [[ $platform == "Linux" ]]; then
     # show details for ls command
     alias ls='ls -aCFho --color=auto'
 elif [[ $platform == "Mac" ]] then
+    #GNU version commands
+    export PATH=/opt/local/libexec/gnubin:$PATH
+
     # Macports-home path
     export PATH=$HOME/macports/bin:$HOME/macports/sbin:$PATH
     export MANPATH=$HOME/macports/share/man:$MANPATH

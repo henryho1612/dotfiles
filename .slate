@@ -44,10 +44,10 @@ alias shiftRight move windowTopLeftX+screenSizeX/16;windowTopLeftY windowSizeX;w
 
 # Key bindings for the positions
 bind f:alt;cmd ${full} # full screen 
-bind left:alt;cmd ${lefthalf} # Left Half
-bind right:alt;cmd ${righthalf} # Right Half
-bind up:alt;cmd ${tophalf} # Top Half
-bind down:alt;cmd ${bottomhalf} # Bottom Half
+bind left:ctrl;shift;alt;cmd ${lefthalf} # Left Half
+bind right:ctrl;shift;alt;cmd ${righthalf} # Right Half
+bind up:ctrl;shift;alt;cmd ${tophalf} # Top Half
+bind down:ctrl;shift;alt;cmd ${bottomhalf} # Bottom Half
 bind 1:ctrl;cmd ${onefourthofscreen-topleft} # One fourth of screen - top left
 bind 2:ctrl;cmd ${onefourthofscreen-topright} # One fourth of screen - top right 
 bind 3:ctrl;cmd ${onefourthofscreen-bottomleft} # One fourth of screen - bottom left
