@@ -60,14 +60,14 @@ bind right:shift;alt;cmd ${moreX} # Increases X
 bind up:shift;alt;cmd ${lessY} # Decreases Y
 bind down:shift;alt;cmd ${moreY} # Increases Y
 
-bind left:ctrl;shift;cmd ${shiftLeft} # Shift Left
-bind right:ctrl;shift;cmd ${shiftRight} # Shift Right
-bind up:ctrl;shift;cmd ${shiftUp} # Shift Up
-bind down:ctrl;shift;cmd ${shiftDown} # Shift Down
+bind left:shift;alt ${shiftLeft} # Shift Left
+bind right:shift;alt ${shiftRight} # Shift Right
+bind up:shift;alt ${shiftUp} # Shift Up
+bind down:shift;alt ${shiftDown} # Shift Down
 
 bind 1:shift;cmd throw 0 resize # throw the window to the 1st screen and resize it to fit that screen 
 bind 2:shift;cmd throw 1 resize # throw the window to the 2nd screen and resize it to fit that screen
-bind s:ctrl;alt relaunch # relaunch Slate
+bind s:ctrl;shift relaunch # relaunch Slate
 
 # Window Hints
 # bind e:cmd hint
