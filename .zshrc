@@ -155,6 +155,9 @@ elif [[ $platform == "Mac" ]] then
     alias wifion="networksetup -setairportpower en1 on"
     alias wifioff="networksetup -setairportpower en1 off"
     alias wifirs="networksetup -setairportpower en1 off && networksetup -setairportpower en1 on"
+    alias genStrings="cd ~/Desktop/Cong\ Viec/Internship/U-Matrix/AWW/iOS/Source/AsianWorldWide/AsianWorldWide/Base.lproj && ibtool Main.storyboard --generate-strings-file Main.strings"
+    alias addSSHKey="/Users/henryho/.script/&&./add_ssh_key.sh"
+    alias tbf="ssh henryho@104.155.215.115"
     
     # ls alias when macports and no macports
     if [ -f $HOME/bin/macports/libexec/gnubin/ls ]; then

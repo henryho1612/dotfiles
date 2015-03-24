@@ -1,12 +1,24 @@
-//Toggle to hide navigation bar
+"3.8.3 (created: 2014/11/09 13:19:01)
+
+source! /Users/henryho/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+
+" Show a (n)umber on tabs, the (b)ottom scrollbar, and the (r)ight scrollbar
+set tabnumbers
+
+" Autocomplete using Firefox Awesomebar subsystem
+set complete=l
+
+" Toggle to hide navigation bar
 map <silent> <F2> :js toggle_navbar()<CR>
 :js << EOF
 function toggle_navbar() {
-    var nb = document.getElementById('nav-bar');
-    if (!nb)
+    var navBar = document.getElementById('nav-bar');
+    if (!navBar)
         return;
-    nb.style.visibility = (nb.style.visibility == '') ? 'collapse' : '';
-    nb.style.overflow = (nb.style.height == '') ? '' : 'hidden';
+    navBar.style.visibility = (navBar.style.visibility == '') ? 'collapse' : '';
+    navBar.style.overflow = (navBar.style.height == '') ? '' : 'hidden';
 }
 toggle_navbar();
 EOF
